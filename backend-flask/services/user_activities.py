@@ -8,7 +8,7 @@ class UserActivities:
       'data': None
     }
 
-    now = datetime.now(timezone.utc).astimezone()
+  now = datetime.now(timezone.utc).astimezone()
     
     
     if user_handle == None or len(user_handle) < 1:
