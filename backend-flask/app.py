@@ -22,8 +22,8 @@ from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import BatchSpanProcessor
 
 #X-Ray
-from aws_xray_sdk.core import xray_recorder
-from aws_xray_sdk.ext.flask.middleware import XRayMiddleware
+#from aws_xray_sdk.core import xray_recorder
+#from aws_xray_sdk.ext.flask.middleware import XRayMiddleware
 
 #X-RAY -------
 #xray_url = os.getenv("AWS_XRAY_URL")
@@ -118,10 +118,10 @@ def data_create_message():
     return model['data'], 200
   return
 
-@app.route("/api/activities/home", methods=['GET'])
-def data_home():
-  data = HomeActivities.run(logger=LOGGER)
-  return data, 200
+#@app.route("/api/activities/home", methods=['GET'])
+#def data_home():
+  #data = HomeActivities.run(logger=LOGGER)
+  #return data, 200
 
 @app.route("/api/activities/notifications", methods=['GET'])
 def data_notifications():
